@@ -15,7 +15,7 @@ L'ordre des colonnes est **figé** dans la liste `NOMS_FEATURES` de `features.py
 
 | # | Colonne | Définition | Type / plage | Exemple | Justification |
 |---|---|---|---|---|---|
-| 1 | `longueur` | Nombre total de caractères, espaces inclus | Entier ≥ 0 | `Mouad123@ ` → 10 | Plus le mot de passe est long, plus le nombre de combinaisons à tester augmente |
+| 1 | `longueur` | Nombre total de caractères, espaces inclus | Entier ≥ 0 | `Ensab123@ ` → 10 | Plus le mot de passe est long, plus le nombre de combinaisons à tester augmente |
 | 2 | `nb_minuscules` | Nombre de lettres minuscules | Entier ≥ 0 | `Ensab123@ ` → 4 | Mesure l'usage de l'alphabet de base |
 | 3 | `nb_majuscules` | Nombre de lettres majuscules | Entier ≥ 0 | `Ensab123@ ` → 1 | Élargit l'espace de recherche d'un attaquant |
 | 4 | `nb_chiffres` | Nombre de chiffres | Entier ≥ 0 | `Ensab123@ ` → 3 | Mesure l'usage des chiffres, souvent ajoutés en fin de mot |
