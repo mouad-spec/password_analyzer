@@ -16,16 +16,16 @@ L'ordre des colonnes est **figé** dans la liste `NOMS_FEATURES` de `features.py
 | # | Colonne | Définition | Type / plage | Exemple | Justification |
 |---|---|---|---|---|---|
 | 1 | `longueur` | Nombre total de caractères, espaces inclus | Entier ≥ 0 | `Mouad123@ ` → 10 | Plus le mot de passe est long, plus le nombre de combinaisons à tester augmente |
-| 2 | `nb_minuscules` | Nombre de lettres minuscules | Entier ≥ 0 | `Mouad123@ ` → 4 | Mesure l'usage de l'alphabet de base |
-| 3 | `nb_majuscules` | Nombre de lettres majuscules | Entier ≥ 0 | `Mouad123@ ` → 1 | Élargit l'espace de recherche d'un attaquant |
-| 4 | `nb_chiffres` | Nombre de chiffres | Entier ≥ 0 | `Mouad123@ ` → 3 | Mesure l'usage des chiffres, souvent ajoutés en fin de mot |
-| 5 | `nb_symboles` | Nombre de caractères qui ne sont ni lettre ni chiffre (espace compris) | Entier ≥ 0 | `Mouad123@ ` → 2 | Les symboles sont rares dans les mots de passe faibles |
-| 6 | `diversite` | Nombre de catégories présentes parmi minuscules, majuscules, chiffres, symboles | Entier de 0 à 4 | `Mouad123@ ` → 4 | Un mélange de catégories complique une attaque |
+| 2 | `nb_minuscules` | Nombre de lettres minuscules | Entier ≥ 0 | `Ensab123@ ` → 4 | Mesure l'usage de l'alphabet de base |
+| 3 | `nb_majuscules` | Nombre de lettres majuscules | Entier ≥ 0 | `Ensab123@ ` → 1 | Élargit l'espace de recherche d'un attaquant |
+| 4 | `nb_chiffres` | Nombre de chiffres | Entier ≥ 0 | `Ensab123@ ` → 3 | Mesure l'usage des chiffres, souvent ajoutés en fin de mot |
+| 5 | `nb_symboles` | Nombre de caractères qui ne sont ni lettre ni chiffre (espace compris) | Entier ≥ 0 | `Ensab123@ ` → 2 | Les symboles sont rares dans les mots de passe faibles |
+| 6 | `diversite` | Nombre de catégories présentes parmi minuscules, majuscules, chiffres, symboles | Entier de 0 à 4 | `Ensab123@ ` → 4 | Un mélange de catégories complique une attaque |
 | 7 | `nb_uniques` | Nombre de caractères différents | Entier ≥ 0 | `aaaa` → 1 | Peu de caractères différents indique un mot de passe pauvre |
 | 8 | `ratio_uniques` | `nb_uniques` divisé par `longueur` (0 si le mot de passe est vide), arrondi à 4 décimales | Décimal de 0 à 1 | `aaaa` → 0.25 | Compare la variété à la longueur : un mot long mais répétitif reste faible |
 | 9 | `max_repetition` | Longueur de la plus longue série du même caractère | Entier ≥ 0 | `aaaa` → 4 | Les répétitions (`aaaa`, `1111`) sont des habitudes très courantes |
 | 10 | `a_une_suite` | 1 si une suite de 3 caractères ou plus, croissante ou décroissante, de lettres ou de chiffres est présente, sinon 0 | 0 ou 1 | `abc` → 1, `aba` → 0 | Les suites (`abc`, `123`, `987`) sont testées en priorité par les attaquants |
-| 11 | `a_motif_clavier` | 1 si un enchaînement de 4 touches voisines d'une ligne de clavier est présent (sens normal ou inverse), sinon 0 | 0 ou 1 | `Mouad_qwerty` → 1 | `azerty` et `qwerty` figurent dans toutes les listes de mots de passe fréquents |
+| 11 | `a_motif_clavier` | 1 si un enchaînement de 4 touches voisines d'une ligne de clavier est présent (sens normal ou inverse), sinon 0 | 0 ou 1 | `Ensab_qwerty` → 1 | `azerty` et `qwerty` figurent dans toutes les listes de mots de passe fréquents |
 | 12 | `a_mot_courant` | 1 si un mot de la liste des mots courants est présent, y compris avec substitutions de caractères, sinon 0 | 0 ou 1 | `P@ssw0rd` → 1 | Les substitutions classiques (`@` pour a, `0` pour o) n'arrêtent pas un attaquant |
 
 ## 3. Choix techniques
