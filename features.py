@@ -179,5 +179,5 @@ def extraire_features_lot(mots_de_passe):
 # ESSAIS MANUELS (ne s'exécutent pas à l'import)
 # =====================================================
 if __name__ == "__main__":
-    print(extraire_features("Mouad123@ "))
+    print(extraire_features("Ensab123@ "))
     print(extraire_features_lot(["abc", "P@ssw0rd", "Zx9!kLm2"]))
