@@ -1,0 +1,23 @@
+    <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Analyseur de mots de passe</title>
+</head>
+<body>
+    <h1>Analyseur de mots de passe</h1>
+    <p>Tapez un mot de passe:</p>
+
+    <!-- Le formulaire -->
+    <form id="formulaire">
+        <input type="password" id="password" placeholder="Mot de passe" required>
+        <button type="submit">Analyser</button>
+    </form>
+
+    <!-- La zone où le résultat va s'afficher -->
+    <div id="resultat"></div>
+
+    <!-- On charge le fichier JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
